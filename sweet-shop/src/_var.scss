@@ -1,0 +1,8 @@
+/* named _var.scss not var.scss to prevent compilar from create var.css file where 
+    var.scss useing just as a partial in other sass files (not a seperat stylesheet) */
+
+$myColor: gold;
+$shadowColor: lightblue;
+$color1: aquamarine;
+$color2: #B6B7DE;
+$color3: white;

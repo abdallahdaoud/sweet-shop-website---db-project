@@ -1,0 +1,5 @@
+1) Phase 0-2 in pdf file.
+2) First run all SQL code. NOTE: previous SweetsShop database if exist will be deleted.
+3) If you want to host your project on other devices on the network you have to change 'const local' in sweet-shop\src\local.js file and customers-website\src\local.js from 'localhost' to your device ip address.
+4) Then open server.py file.
+5) Write on each cmd 'npm start' to run react app for sweet shop manager and customers.

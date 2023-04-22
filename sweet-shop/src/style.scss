@@ -1,0 +1,195 @@
+@import 'var';
+
+h1, h2 {
+  color: $color2;
+}
+
+#root, body, html {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+nav {
+  display: flexbox;
+  box-shadow: 0 1px 2px black,  0 1px 4px black;
+  background-color: $color1;
+  font-family: Sans-Serif;
+  padding: .2vw .5vw .5vw .5vw;
+  ul {
+    margin: 0;
+    display: inline;
+  }
+  li { 
+    display: inline-block;
+    padding: 8px;
+  }
+  li > * { 
+    color: $color3; 
+    text-decoration: none;
+  }
+}
+#selectData {
+  display: inline;
+  padding: 0 0 0 4vw;
+  button { 
+    margin: 0 .6vw 0 0;
+    padding: .3vw;
+    border-radius: .4vw;
+  }
+  input { width: 30vw; }
+}
+#queryReports {
+  display: inline;
+  padding-left: 3vw;
+  span { margin-right: 1%; }
+  button { 
+    margin: 0 .3vw 0 .3vw;
+    width: 15vw; 
+  }
+  b { 
+    display: inline-block;
+    position: relative;
+    top: .4vw;
+    cursor: pointer;
+    text-shadow: 0 0 3px black; 
+    @include unselectable;
+    font-size: 2em;
+  }
+
+}
+@media screen and (max-width: 1000px) {
+  nav { 
+    padding: 1vw 0;
+    ul { 
+      padding: 2vw;
+      li { 
+        font-weight: bolder;
+        // text-shadow: 0 0 2px white; 
+      }
+    }
+  }
+  #queryReports { 
+    display: block; 
+    button { 
+      border-radius: 6px;
+      width: 30vw; 
+      margin: 0 .5vw;
+    }
+    b { top: 1vw; }
+    position: relative;
+    bottom: 1vw;
+  }
+  #selectData {
+    padding-left: 0;
+    margin-left: 0;
+    button { 
+      margin-left: 0; 
+      border-radius: 4px;
+    }
+  }
+  // nav * { 
+  //   padding-top: 0 !important;
+  //   padding-bottom: 0 !important;
+  //   margin-top: 0 !important;
+  //   margin-bottom: 0 !important;
+  // }
+}
+@media (max-width: 500px) {
+  #selectData { 
+    display: block; 
+    padding-left: 4vw;
+    input { 
+      width: 60vw; 
+      margin-left: 1vw;
+    }
+    position: relative;
+    top: 1vw;
+  }
+  #queryReports {
+    padding-left: 4vw;
+    button { 
+      width: 50vw; 
+      margin: 0 1vw;
+    }
+    b { top: 2vw; }
+  }
+}
+@mixin box {
+  padding: 0 3vw 3vw 3vw;
+  margin: 3vw;
+  border: 3px solid $color1;
+  box-shadow: 0 0 10px gray inset;
+  border-radius: 1vw;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
+  // justify-content: center;
+  // align-content: center;
+  @include box;
+  min-height: 30vw;
+  h1 { 
+    // text-align: center;
+    margin: 2vw; 
+    flex-basis: 100%;
+  }
+  .card1 {
+    flex-basis: 15%;
+    @include unselectable;
+  }
+}
+.card {
+  @include box;
+}
+
+.myclass {
+  color: gold;
+}
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  // width: 14vw;
+  min-height: max(18vw, 180px);
+  // min-width: 120px;
+  // min-height: 130px;
+  color: rgb(0, 0, 0);
+  margin: 1vw;
+  display: inline-block;
+  padding: 2vw;
+  img { 
+    width: 40%;
+  }
+}
+
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(182, 11, 11, 0.2);
+}
+
+.container1 {
+  width: max(15vw, 140px);
+  padding: .5vw 0;
+  h3 { margin: 1vw 0; }
+  h5 { margin: .3vw 0 .2vw 0; }
+  input { 
+    width: 80%; 
+    padding: 0 2%;
+  }
+  .btn1 { 
+    width: 41%;
+    margin: 1vw 2% 0 0; 
+  }
+  .btn2 { 
+    width: 41%;
+    margin: 0 0 0 2%; 
+
+  }
+}
